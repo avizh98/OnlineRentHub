@@ -6,7 +6,7 @@ exp.use(express.json());
 mongoose.set("strictQuery", false);
 
 const BASE_URL =
-  "mongodb://localhost:27017/rentdb";
+  "mongodb+srv://Avizh:983102018@renterhub.amwbzwu.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
   .connect(BASE_URL, {
