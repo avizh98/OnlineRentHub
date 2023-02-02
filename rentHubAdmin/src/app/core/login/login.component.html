@@ -1,0 +1,12 @@
+<form class="login-form" [formGroup]="loginDetailsForm">
+
+  <h2>Rent Hub Admin</h2>
+  <input type="email" formControlName="username" name="email" id="email" placeholder="Email or Username">
+  <div>
+    <input type="password" formControlName="password" name="password" id="password" placeholder="Password">
+    <a href="" class="fp">Forget password</a>
+  </div>
+
+  <button class="login-btn" (click)="loginUser()">Login</button>
+<!--  <button class="login-btn" [routerLink]="'../signup'">Signup</button>-->
+</form>

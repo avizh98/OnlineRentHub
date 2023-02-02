@@ -1,0 +1,63 @@
+<div class="alert-body">
+  <div class="alert-header mat-elevation-z1">
+    <div></div>
+    <div class="alert-header-title ">
+      <span>Update Item</span>
+    </div>
+    <div></div>
+  </div>
+
+  <form #form [formGroup]="itemDetailsForm">
+    <div id="forms">
+
+      <div>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Item Title</mat-label>
+            <input  matInput formControlName="itemTitle" placeholder="Item Title" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Item Location</mat-label>
+            <input formControlName="itemLocation" matInput placeholder="Item Location" ngDefaultControl minlength="3">
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Item Price</mat-label>
+            <input  matInput formControlName="itemPrice" placeholder="Item Price" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Item Desc</mat-label>
+            <input formControlName="itemDesc" matInput placeholder="Item Desc" ngDefaultControl minlength="3">
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Item Img</mat-label>
+            <input  matInput formControlName="itemImg" placeholder="Item Img" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+
+        </div>
+
+
+      </div>
+      <div class="form-row"></div>
+
+      <div id="bottom-side">
+        <div id="pics">
+        </div>
+        <div id="buttons">
+          <button mat-raised-button id="cancelbtn" type="button" (click)="btnCancel()">Cancel</button>
+          <button id="savebtn" mat-raised-button type="submit" (click)="UpdateComplaint()" *ngIf="!apiResponse">Save
+          </button>
+          <button mat-raised-button id="spinner" [class.spinner]="apiResponse" *ngIf="apiResponse"></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<main>
+  <section class="category">
+    <h3>Categories</h3>
+    <ul>
+      <li> <a href="">Electrical</a></li>
+      <li> <a href="">Furniture</a></li>
+      <li> <a href="">Fancy</a></li>
+      <li> <a href="">Plumbing</a></li>
+      <li><a href="">Construction</a></li>
+      <li><a href="">Brass</a></li>
+      <li><a href="">Sanitary</a></li>
+      <li><a href="">Steal</a></li>
+      <li><a href="">Other</a></li>
+    </ul>
+  </section>
+
+  <section id="product-container" class="product-container" data-current-page="1"  matSort>
+
+    <div class="product-item" *ngFor="let items of itemDetails">
+      <img [src]='items.itemImg' alt="product-img">
+      <h3 class="product-name" >{{items.itemTitle}}</h3>
+      <p class="price">{{items.itemPrice}}</p>
+      <button mat-raised-button color="primary" (click)="viewDetails(items._id)" class="mb-4">View Item</button>
+    </div>
+
+  </section>
+
+
+</main>

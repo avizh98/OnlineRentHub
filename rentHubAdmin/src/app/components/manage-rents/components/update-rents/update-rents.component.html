@@ -1,0 +1,69 @@
+<div class="alert-body">
+  <div class="alert-header mat-elevation-z1">
+    <div></div>
+    <div class="alert-header-title ">
+      <span>Update Rent Item</span>
+    </div>
+    <div></div>
+  </div>
+
+  <form #form [formGroup]="itemDetailsForm">
+    <div id="forms">
+
+      <div>
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Ritem Title</mat-label>
+            <input  matInput formControlName="RitemTitle" placeholder="Ritem Title" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ritem Location</mat-label>
+            <input formControlName="RitemLocation" matInput placeholder="Ritem Location" ngDefaultControl minlength="3">
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ritem Price</mat-label>
+            <input  matInput formControlName="RitemPrice" placeholder="Ritem Price" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ritem Desc</mat-label>
+            <input  matInput formControlName="RitemDesc" placeholder="Ritem Desc" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+        </div>
+
+        <div class="form-row">
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ritem Img</mat-label>
+            <input  matInput formControlName="RitemImg" placeholder="Ritem Img" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>username</mat-label>
+            <input  matInput formControlName="username" placeholder="username" ngDefaultControl  minlength="3">
+          </mat-form-field>
+
+        </div>
+
+
+      </div>
+      <div class="form-row"></div>
+
+      <div id="bottom-side">
+        <div id="pics">
+        </div>
+        <div id="buttons">
+          <button mat-raised-button id="cancelbtn" type="button" (click)="btnCancel()">Cancel</button>
+          <button id="savebtn" mat-raised-button type="submit" (click)="UpdateComplaint()" *ngIf="!apiResponse">Save
+          </button>
+          <button mat-raised-button id="spinner" [class.spinner]="apiResponse" *ngIf="apiResponse"></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

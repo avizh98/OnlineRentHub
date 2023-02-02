@@ -1,0 +1,38 @@
+
+<main>
+  <form #form (ngSubmit)="saveItem()" [formGroup]="itemDetailsForm" class="form-container">
+
+    <div>
+      <label >Title</label>
+      <input id="title" formControlName="itemTitle" ngDefaultControl type="text" placeholder="Enter Equipment name" required />
+    </div>
+
+    <div>
+      <label >Location</label>
+      <input id="location" formControlName="itemLocation" ngDefaultControl type="text" placeholder="Paste Google Map link here" required />
+      <div id="map-preview"></div>
+    </div>
+
+    <div>
+      <label >Price</label>
+      <input id="Price" formControlName="itemPrice" ngDefaultControl type="text" placeholder="Enter epuipment renting price" required>
+    </div>
+
+    <div>
+      <label >Description</label>
+      <textarea id="Description" formControlName="itemDesc" ngDefaultControl placeholder="Enter equipment description" required></textarea>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <div>
+      <label >Upload your images</label>
+      <input id="itemImg" formControlName="itemImg" ngDefaultControl type="text" placeholder="Paste Image link here" required>
+    </div>
+
+
+    <button class="post-add-btn" type="submit">Post add</button>
+
+  </form>
+</main>
+

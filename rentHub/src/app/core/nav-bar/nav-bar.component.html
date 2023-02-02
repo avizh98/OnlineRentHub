@@ -1,0 +1,26 @@
+<header>
+<div class="nav-bar">
+  <img src="../../../assets/image/web-icon.png" alt="web-icon" class="icon" style="cursor: pointer" [routerLink]="'../homepage'" />
+  <a href="" class="nav-link">browse all <br />
+    <span>Categories</span>
+  </a>
+  <div class="search">
+    <input type="text" name="" id="" class="search-input" />
+    <a href="" class="search-btn">
+<!--      <fa-icon [icon]="faFacebook" class="side-btn-icon "></fa-icon>-->
+      <mat-icon aria-hidden="false" class="side-btn-icon " aria-label="Example search icon" fontIcon="search">search</mat-icon>
+
+      <span class="ion ion-md-attach"></span>
+    </a>
+  </div>
+  <a href="" class="nav-link rent-btn" [routerLink]="'../additems'">Rent</a>
+<!--  <a href="" class="nav-link log-btn" [routerLink]="'../login'">Log in</a>-->
+  <button class="nav-link log-btn" routerLinkActive="buttonActive" [routerLink]="'../login'" href="#" *ngIf="UserNamex">Login</button>
+  <button *ngIf="UserNamey" style="top: 0px;left: -23px;width: 86px;font-weight: 500;font-size: 16px;position: relative"  mat-button [matMenuTriggerFor]="menu">{{usersname}}</button>
+  <mat-menu #menu="matMenu">
+<!--    <button routerLinkActive="buttonActive" [routerLink]="'./profile'" href="#" mat-menu-item *ngIf="showProfile">User Profile</button>-->
+    <button routerLinkActive="buttonActive" [routerLink]="'../rentitems'" href="#" mat-menu-item *ngIf="showProfile">Rented</button>
+    <button mat-menu-item (click)="logout()" *ngIf="showProfile">Logout</button>
+  </mat-menu>
+</div>
+  </header>

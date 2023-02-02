@@ -1,0 +1,15 @@
+<main>
+
+  <section id="product-container" class="product-container" data-current-page="1"  matSort>
+
+    <div class="product-item" *ngFor="let items of itemDetails">
+      <img [src]='items.RitemImg' alt="product-img">
+      <h3 class="product-name" >{{items.RitemTitle}}</h3>
+      <p class="price">{{items.RitemPrice}}</p>
+      <button mat-raised-button color="primary" (click)="viewDetails(items._id)" class="mb-4">View Item</button>
+    </div>
+
+  </section>
+
+
+</main>
